@@ -20,6 +20,23 @@ task('deploy-erc721-staking', 'Deploys the ERC721 Staking Contract')
 		);
 	});
 
+task('deploy-staking-contract', 'Deploys the Staking Contract')
+	.addParam('nftCollection', 'The address of the nft collection')
+	.addParam('rewardsToken', 'The address of the rewards token')
+	.setAction(async (args) => {
+		const deployStakingContract = require('./scripts/deploy-staking-contract');
+		await deployStakingContract(
+			args.nftCollection,
+			args.rewardsToken,
+		);
+	});
+
+task('deploy-linklink', 'Deploys linklink')
+	.setAction(async (args) => {
+		const deployStakingContract = require('./scripts/deploy-linklink');
+		await deployStakingContract();
+	});
+
 module.exports = {
 	solidity: {
 		version: '0.8.11',

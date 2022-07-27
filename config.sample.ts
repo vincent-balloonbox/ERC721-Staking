@@ -5,6 +5,11 @@ export const networks: NetworksUserConfig = {
     coverage: {
         url: 'http://localhost:8555',
     },
+    // mumbai:{
+    //     url: 'https://polygon-mumbai.infura.io/v3/YOUR-INFURA-API-KEY',
+    //     chainId: 80001,
+    //     accounts: ["YOUR_PK_HERE"]
+    // }
     // rinkeby: {
     //     url: 'https://rinkeby.infura.io/v3/YOUR-INFURA-API-KEY',
     //     chainId: 4,
